@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Linda, Meu Amor! ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #ffebee, #ffcdd2); /* Gradiente suave de rosa pálido */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+            color: #4a5568; /* Cor de texto padrão para melhor contraste */
+            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+        }
+        /* Efeito de pulse para o coração */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .heart-pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        /* Estilos para o card principal */
+        .card {
+            @apply bg-white p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl max-w-xl w-full text-center space-y-8 border-4 border-pink-300 transform transition-all duration-500 ease-in-out hover:scale-102;
+        }
+        /* Estiliza o player de áudio */
+        audio {
+            @apply w-full max-w-sm mx-auto mt-6 p-2 rounded-full bg-pink-100 border border-pink-300 shadow-md;
+        }
+    </style>
+</head>
+<body class="selection:bg-pink-400 selection:text-white">
+    <div class="card">
+        <div class="flex justify-center items-center text-7xl mb-6 heart-pulse text-red-500">❤️</div>
+
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-pink-700 leading-tight">
+            Feliz Dia dos Namorados, Minha Linda!
+        </h1>
+
+        <p class="text-xl leading-relaxed text-gray-700">
+            Hoje, e todos os dias, celebro o amor que sinto por você.
+            Sua presença na minha vida é o maior presente, a luz que ilumina meus dias e a melodia que embala meu coração.
+            E desde a primeira vez que te vi, eu já sabia que era você quem eu escolheria para caminhar ao meu lado.
+        </p>
+
+        <p class="text-xl leading-relaxed text-gray-700">
+            Cada momento ao seu lado é uma memória preciosa que guardo com carinho.
+            Seu sorriso é a minha alegria, e seu abraço é o meu porto seguro.
+        </p>
+
+        <p class="text-xl leading-relaxed text-gray-700">
+            Que nosso amor continue crescendo, se fortalecendo e nos inspirando a cada novo amanhecer. Mal posso esperar por todas as aventuras, desafios e sonhos que ainda vamos realizar juntos. Sou eternamente grato por ter você.
+        </p>
+
+        <p class="text-2xl font-bold text-pink-600 mt-10">
+            Com todo o meu amor, Niro, sempre seu eterno apaixonado.
+        </p>
+
+        <div class="mt-8">
+            <p class="text-lg text-gray-600 mb-2">
+      
+                <span class="text-sm font-semibold text-pink-500 block sm:inline">(Dê o play abaixo!)</span>
+            </p>
+            <audio controls loop>
+                <source src="https://github.com/Niroveu/sitesniro/raw/refs/heads/main/Ed%20Sheeran%20-%20Thinking%20out%20Loud%20(Lyrics).mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dispara confetes ao carregar a página
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
